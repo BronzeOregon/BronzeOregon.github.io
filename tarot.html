@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Red Goddess Oracle - Tarot</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slideshow.css">
 </head>
 <body>
     <header>
@@ -35,5 +36,73 @@
             </div>
         </div>
     </nav>
+
+    <div class="Left-Slideshow">
+        <div class="slide fade">
+            <img src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="width: 70%">
+        <h2>Tarot: The world's first TCG</h2>
+        <p>Try using Wind-Up Kitten in attack mode! Failing that, hit them with a volcano cannon.</p>
+    </div>
+    <div class="Right-SlideShow">
+        <div class="slide fade">
+            <img src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <script>
+            let slideIndex = [1,1];
+            /* Class the members of each slideshow group with different CSS classes */
+            let slideId = ["Left-Slideshow", "Right-Slideshow"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                let i;
+                let x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}
+                if (n < 1) {slideIndex[no] = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no]-1].style.display = "block";
+            }
+        </script>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Red Goddess Oracle - TestLayout</title>
+    <link rel="stylesheet" href="Layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slideshow.css">
+</head>
+<body class="grid-container">
+    <div class="banner">
+        <header>
+            <a href="index.html" style="margin-left: 16%"><img src="./assets/REDGODDESSBANNER2.webp" alt="Flaming Goddess with Red Goddess Oracle - Metaphysical Readings written beside her"
+                                                               style="border: solid black 2px; border-radius: 4px"></a>
+        </header>
+
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Services and Products</button>
+                <div class="dropdown-content">
+                    <a href="readings.html">Metaphysical Readings</a>
+                    <a href="sachetsplus.html">Sachets, Candles, and Stones</a>
+                    <a href="tarot.html">Tarot</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Friends of The Seer</button>
+                <div class="dropdown-content">
+                    <a href="empathic.html">The Empathic's Journey</a>
+                    <a href="etsy.html">Our Etsy</a>
+                    <a href="">IDK, another friend?</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About Me</button>
+                <div class="dropdown-content">
+                    <a href="journey.html">My Journey</a>
+                    <a href="contact.html">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="leftAdSpace"><div class="Left-Slideshow">
+        <div class="slide fade">
+            <img src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+        </div>
+        <div class="slide fade">
+            <img src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        </script>
+    </div>
+    </div>
+
+    <div class="mainBody">
+        <section class="center-content">
+            <h2>Welcome!</h2>
+            <p>Red Goddess Oracle was founded with the goal of providing metaphysical readings and spiritual guidance
+                to people of all walks of life, providing assistance in resolving lingering doubts and questions.</p>
+            <h3>What is a metaphysical reading?</h3>
+            <p>A metaphysical reading is wherein messages are channeled from spirit through the use of abilities, sensitivities and tools,
+                such as pendulums, tarot, and runes.</p>
+            <h3>What's the difference between metaphysical and psychic readings?</h3>
+            <p>Psychic readings generally don't utilize any tools, instead directly using a combination of "clairs", spirit teams, and
+                claircognizance, which differs from other clairs in that it shows possible future outcomes.</p>
+            <p>Mediumship readings on the other hand, focus on connecting with the departed, such as loved ones that have passed on, and are
+                recognized as being distinct from psychic readings. These focus on answering questions, passing messages, and sharing the gift
+                of love that transcends mortal boundaries.</p>
+            <h3>Divinations of the Oracle</h3>
+            <div>
+                <section class="blog-posts" id="blog-posts" style="height: 480px; width: auto; overflow: auto; border: 2px solid black; border-radius: 5px;">
+                </section>
+                <script>
+                    const dateFormat = new Intl.DateTimeFormat('en-US', {
+                        dateStyle: 'full'
+                    });
+                    function handleResponse(response) {
+                        const postDate = dateFormat.format(new Date(response.published));
+                        document.getElementById("blog-posts").innerHTML +=
+                            "<h1>" + postDate + "</h1>" + "<h2>" + response.title + "</h2>" + response.content;
+                    }
+                </script>
+                <script
+                        src="https://www.googleapis.com/blogger/v3/blogs/2428690756319385178/posts/2826737821073885306?callback=handleResponse&key=AIzaSyAv81S65PEjFbVyBI6CLvAAhvGRRq1IMXU"
+                ></script>
+            </div>
+<h3></h3>
+</section>
+    </div>
+</body>
+</html>

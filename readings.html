@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Red Goddess Oracle - Readings</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Layout.css">
+    <link rel="stylesheet" href="slideshow.css">
 </head>
-<body>
+<body class="grid-container">
+<div class="banner">
     <header>
         <a href="index.html" style="margin-left: 16%"><img src="./assets/REDGODDESSBANNER2.webp" alt="Flaming Goddess with Red Goddess Oracle - Metaphysical Readings written beside her"
                                                            style="border: solid black 2px; border-radius: 4px"></a>
     </header>
+
     <nav class="navbar">
         <div class="dropdown">
             <button class="dropbtn">Services and Products</button>
@@ -35,8 +39,107 @@
             </div>
         </div>
     </nav>
-    <section class="center-content">
-        <h2>This page should have an eCommerce page, or have an embedded page to an eCommerce storefront.</h2>
+</div>
+
+<div class="leftAdSpace"><div class="Left-Slideshow">
+    <div class="slide fade">
+        <img src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+    </div>
+    <div class="slide fade">
+        <img src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+    </div>
+    <div class="slide fade">
+        <img src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</div>
+</div>
+
+<div class="mainBody">
+    <section class="center-two-column">
+        <h2>Types of Readings and Spiritual Services</h2>
+        <div class="column1">
+            <h3>Spiritual Services:</h3>
+            <ol>
+                <li>
+                    <p>Spiritual Cleansing Ritual:</p>
+                    <p>Usual time frame is 4 to 5 hours. Consultation first via Skype or over the phone.
+                        To determine the level of cleansing required. This service is tailored to the individual for their needs.
+                        Included is personal consultation, items created and crafted for you to use along with my ritual work.
+                        This creates stronger cleansing and helps remove blocks, negativity or any hexes.
+                        We will connect again to share results and follow-up steps if needed.</p>
+                </li>
+                <li>
+                    <p>Cord Cutting and Separation Ritual:</p>
+                    <p>This specific service varies on the level you require of the separation.
+                        Ritual and preparation of this service varies from 6-8. All the tools, products are hand-crafted for optimal efficacy.
+                        There is a personal consultation via Skype, phone or in person. This allows a greater understanding of the needs required by you.
+                        There are many moving parts for this ritual service. We will connect afterward, and I will share photos and results.
+                        We will also schedule one more follow up. For advice and further steps if necessary.</p>
+                </li>
+                <li>
+                    <p>Spiritual Blessing and Prayers:</p>
+                    <p>This specific service is highly involved and requires lots of extra energy and channeling blessings and prayers towards you.
+                        First there will be a personal consultation. This will make clear what is required to assist you in what you are hoping for.
+                        The overall length of this service is over a three-day period. After this ritual is completed, we  will connect again and results will be shared with some photos as well.</p>
+                </li>
+            </ol>
+        </div>
+        <div class="column2">
+            <h3>Reading Types/Services:</h3>
+            <ul>
+                <li>
+                    <p>Traditional Mediumship Reading:</p>
+                    <p>I like to schedule for 1 hour. Readings usually last closer to an hour and a half.
+                        We connect over Zoom,Skype or telephone. Whichever you are most comfortable with.
+                        You can hold the person in your thoughts who you would like to come through.
+                        I can not guarantee who steps forward, yet we have time for hopefully several loved ones stepping forward and sharing messages. </p>
+                </li>
+                <li>
+                    <p>Psychic Readings:</p>
+                    <p>Scheduling for 30 minute appointments. Unlimited questions.
+                        I will be using my claircognizance and clairvoyance abilities to assist you in finding some of the answers you seek.
+                        However, even though I am very accurate, potential future outcomes are possibilities.
+                        We have Free Will and can make choices to change future outcomes.
+                        These readings are done in person, over Zoom, Skype or telephone.</p>
+                </li>
+                <li>
+                    <p>Tarot Readings:</p>
+                    <p>3 card pulls, 7 card pulls and more advanced in depth layouts are possible.
+                        These can be scheduled via Zoom or I will provide photos of cards and a written, descriptive report of your reading. </p>
+                </li>
+                <li>
+                    <p>Pendulum Readings:</p>
+                    <p>These are 30-minute readings, utilizing one of the pendulums (that I feel called to use) that will provide the most accurate connection to your guides.
+                        There are unlimited questions during your 30-minute seating. </p>
+                </li>
+            </ul>
+        </div>
     </section>
+</div>
 </body>
 </html>
