@@ -79,8 +79,8 @@ a:hover{
     background-color: rgba(30,30,30,0.5);
     align-content: center;
     position: relative;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-left: 10%;
     margin-right: 10%;
     background-size: 50%;
@@ -106,8 +106,7 @@ a:hover{
 }
 
 .center-content p{
-    margin: 5%;
-    font-weight: bold;
+    margin: 0;
     color: #FFFFFF;
 }
 
