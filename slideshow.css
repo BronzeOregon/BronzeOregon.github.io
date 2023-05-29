@@ -3,6 +3,7 @@
 /* Slideshow container */
 .Left-Slideshow {
     float: left;
+    scale: 50%;
     max-width: 600px;
     position: relative;
     left: 0px;
@@ -11,6 +12,7 @@
 
 .Right-Slideshow {
     float: right;
+    scale: 50%;
     max-width: 600px;
     position: relative;
     left: 0px;
