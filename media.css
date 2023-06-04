@@ -1,0 +1,241 @@
+:root{
+
+}
+
+body{
+    color: white;
+    background-color: #3c393d;
+    background-image: url("./assets/Starry.webp");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+header{
+    margin-bottom: 0;
+}
+a:link{
+    color: wheat;
+    font-weight: bold;
+}
+a:visited{
+    color: beige;
+}
+a:hover{
+    color: coral;
+}
+
+.dropbtn{
+    background-color: darkslategrey;
+    color: white;
+    padding: 16px;
+    border: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 0.25fr;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: coral;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3c393d}
+
+.navbar{
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    margin-left: 20%;
+    margin-right: -20%;
+    background-color: dimgrey;
+    width: 60%;
+}
+
+.center-two-column{
+    background-color: rgba(30,30,30,0.5);
+    align-content: center;
+    position: relative;
+    display: inline-grid;
+    column-count: 2;
+    column-gap: 2.5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.column1{
+    grid-column-start: 1;
+}
+
+.column2{
+    grid-column-start: 2;
+}
+
+.center-content p{
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.blog-posts{
+    background-color: #262626;
+    color: #f32323;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 0.3fr 3fr 0.4fr;
+    grid-template-areas:
+        "banner banner"
+        "nav nav"
+        "leftslideshow main"
+        "blog blog";
+    grid-gap: .2rem;
+}
+
+.banner{
+    grid-area: banner;
+}
+
+.banner-img{
+    width: 100%;
+    height: auto;
+    border: solid black 2px;
+    border-radius: 4px;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.mainBody{
+    grid-area: main;
+    background-color: rgba(30,30,30,0.5);
+    align-content: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+.blog-posts{
+    grid-area: blog;
+}
+
+.leftAdSpace{
+    grid-area: leftslideshow;
+}
+
+#etsy{
+    height: auto;
+    width: auto;
+    overflow: scroll;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.4fr 3fr 2fr;
+        grid-template-areas:
+            "banner"
+            "nav"
+            "main"
+            "blog";
+    }
+
+    .banner-img{
+        background-image: url("assets/SimpleSil1.webp");
+    }
+
+    .navbar{
+        width: 100%;
+        margin: auto;
+    }
+
+    .dropdown{
+        width: 0.3fr;
+        font-size: 14px;
+    }
+
+    .mainBody{
+        font-size: 16px;
+    }
+
+    .center-two-column{
+        margin: auto;
+    }
+
+    #etsy{
+        width: 1fr;
+        height: 60vh;
+    }
+
+    .leftAdSpace{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .grid-container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 0.3fr 2fr 2fr;
+        grid-template-areas:
+        "banner banner"
+        "nav nav"
+        "leftslideshow main"
+        "blog blog";
+        grid-gap: .2rem;
+        grid-row-gap: .1fr;
+    }
+
+    .banner-img{
+        background-image: url("assets/SimpleSil1.webp");
+    }
+
+    .navbar{
+        width: 60%;
+        margin: auto;
+    }
+
+    .dropdown{
+        width: 0.3fr;
+        font-size: 14px;
+    }
+
+    .mainBody{
+        font-size: 16px;
+        align-self: center;
+    }
+
+    .center-two-column{
+        margin: auto;
+    }
+
+    #etsy{
+        align-content: center;
+        width: 55%;
+        height: 75vh;
+        margin: auto;
+    }
+}
