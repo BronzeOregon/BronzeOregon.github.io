@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Red Goddess Oracle - My Journey</title>
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body class="grid-container">
+<div class="banner">
+    <header>
+        <a href="index.html"><img src="./assets/REDGODDESSBANNER2.webp" alt="Flaming Goddess with Red Goddess Oracle - Metaphysical Readings written beside her"
+                                  class="banner-img"></a>
+    </header>
+</div>
+<div class="nav">
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Services and Products</button>
+            <div class="dropdown-content">
+                <a href="readings.html">Metaphysical Readings</a>
+                <a href="sachetsplus.html">Sachets, Candles, and Stones</a>
+                <a href="tarot.html">Tarot</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Friends of The Seer</button>
+            <div class="dropdown-content">
+                <a href="empathic.html">The Empathic's Journey</a>
+                <a href="etsy.html">Our Etsy</a>
+                <a href="">IDK, another friend?</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Get in Touch</button>
+            <div class="dropdown-content">
+                <a href="newsletter.html">Our Newsletter</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="leftAdSpace"><div class="Left-Slideshow">
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+    </div>
+
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</div>
+</div>
+
+<div class="formBody">
+    <form method="post" action="subscribe.php">
+        <div>
+            <h2>Subscribe to our Newsletter!</h2>
+            <p>Please note: while this note is up, do not provide any live emails to the form.</p>
+        </div>
+        <div>
+            <label for="name"></label><input type="text" id="name" placeholder="Name" name="Name" required="required">
+            <label for="email"></label><input type="email" id="email" placeholder="Your.Email@emailcom" name="Email" required="required">
+            <label for="newsletter"></label><input type="checkbox" checked="checked" id="newsletter" name="Newsletter">Newsletter
+            <label for="discounts"></label><input type="checkbox" checked="checked" id="discounts" name="Discounts">Discounts
+        </div>
+        <div>
+            <input type="submit" value="Sign-Up!">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

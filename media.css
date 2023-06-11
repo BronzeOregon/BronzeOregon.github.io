@@ -151,6 +151,14 @@ a:hover{
     border-radius: 5px;
 }
 
+.formBody{
+    grid-row: auto;
+    width: 70%;
+    background-color: rgba(30,30,30,0.5);
+    align-content: center;
+    text-shadow: 1px 1px 1px black;
+}
+
 @media only screen and (max-width: 600px){
     .grid-container{
         grid-template-columns: 1fr;
