@@ -9,6 +9,20 @@ body{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 header{
@@ -133,6 +147,7 @@ a:hover{
     background-color: rgba(30,30,30,0.5);
     align-content: center;
     text-shadow: 1px 1px 1px black;
+    margin-right: 20px;
 }
 
 .blog-posts{
