@@ -7,7 +7,7 @@ $siteEmail = 'redgoddessoracle@gmail.com';
 //Database config
 define('DB_HOST', "localhost");
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'Sigfried3!');
+define('DB_PASSWORD', ' ');
 define('DB_NAME', 'redgoddesssubscribers');
 
 $siteURL = (!empty($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on")?'https://':'http://';
