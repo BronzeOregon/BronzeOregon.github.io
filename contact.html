@@ -29,7 +29,6 @@
             <div class="dropdown-content">
                 <a href="empathic.html">The Empathic's Journey</a>
                 <a href="etsy.html">Our Etsy</a>
-                <a href="">IDK, another friend?</a>
             </div>
         </div>
         <div class="dropdown">
@@ -42,9 +41,50 @@
     </nav>
 </div>
 
+<div class="leftAdSpace"><div class="Left-Slideshow">
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</div>
+</div>
+
     <div class="mainBody">
-        <h2>Contact Me</h2>
-        <p>Contact Info Here</p>
+        <h2>About Me</h2>
+        <p>Here begins the difficult part. I am not overly prone to sharing about myself. It’s so much more fun to learn about you. This is not deflection, more curiosity. I love to meet new people, make friends and learn about you through your personal lens of experience. Since I do believe in balance, I should share with you a little about my journey. Be warned, I do love words. So it may get well, a bit wordy. Here we go!</p>
+        <p>My name is Bridget. I have always been intuitive. We can call it sensitive to the energy, vibrations and spirit element that surrounds us. Much like The Force in Star Wars. Sensitive to all living and energetic things around us. Like most who have these abilities, we experience things that scare us, shake us, or otherwise sometimes have unpleasant experiences that we can not explain. So we decide to turn off or turn down our natural abilities or gifts. This was true for me, as I became increasingly more clairaudient and my ability to “see” became more intensified. I was not able to shut down completely. Instead, turning one ability down, allowed another to step up. At the age of 12 I was extremely claircognizant. I not only had “ knowing” I also could see the outlines of what may happen in the future. Weird, right?! It seemed normal. I was aware that not everyone was as “ in tune” as I was. And I kind of learned to filter.</p>
+        <p>Fast forward to many, many years down the road. The abilities I left behind in my childhood decided to jump back into the forefront. I worked at several locations that had lore and urban myths about being haunted. Well, I would say haunted is inaccurate. More like residual echoes and energy of tragic or sad spirits. Did I hear them? Yes. Did I see them? Sometimes.Was I yelled, called and my attention drawn to these spirits? Yes. None were harmful. Just lost or seeking acknowledgement or assistance.  It seemed normal. Even though that was not the experience for most. Life is interesting, is it not?</p>
+        <p>Now I sit here and share a little bit about myself, in hope that you will feel more comfortable in choosing to talk with me. Sate your curiosity in being drawn to a Psychic, Medium, Spiritualist…..whichever identifier you prefer. I will tell you that I do not believe in coincidences. I believe in synchronicities and Universal assistance. You know, like how when you are really thinking of that friend you haven’t spoken to in a while, then they reach out to you? It’s like that. So you ask, why does she use the term Oracle? What is this Red Goddess thing? Great questions! It is not a label I affix to myself, yet it is one that has been given to me by many members of my Spirit Teams and Guides. It harkens back to what I have done throughout many past lives. Being a Seer, Priestess and Oracle. As for the Red Goddess part, well many of these energies that I have come to know, channel and am taught by are Goddesses. Many of them present and identify with the color red. Red is not only for love, it represents passion, power, grounding, otherworldly. I hope that this diatribe about me has assisted you in your curiosity. I truly look forward to hearing from you, answering questions or assisting you in connecting more with spirit, yourself or simply by letting you know that you are not alone.</p>
+        <p>I would really like to say thank you for taking the time and interest in learning a little about me. I really hope that this has intrigued you even further into starting a dialogue or connecting with me further. May your days be full of blessings, Even though times life may be challenged, dark or totally frustrating, you still have the power and light that resides within.</p>
+        <p>Walk in the Light my friends,</p>
+        <p>RG Oracle</p>
     </div>
 </body>
 </html>

@@ -29,7 +29,6 @@
             <div class="dropdown-content">
                 <a href="empathic.html">The Empathic's Journey</a>
                 <a href="etsy.html">Our Etsy</a>
-                <a href="">IDK, another friend?</a>
             </div>
         </div>
         <div class="dropdown">
@@ -42,5 +41,47 @@
     </nav>
 </div>
 
+<div class="leftAdSpace"><div class="Left-Slideshow">
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CandlesAd.webp" alt="Advertisement showing candles.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/CrystalChunks2Ad.webp" alt="Advertisement showing crystals.">
+    </div>
+    <div class="slide fade">
+        <img class="responsive-img" src="assets/SageBundlesAd.webp" alt="Advertisment showing dried sage and other herbs">
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</div>
+</div>
+
+<div class="mainBody">
+    <h2>The Empathic's Journey</h2>
+    <p>The Empathic's Journey is a community of like-minded individuals aimed at collaborating and expanding our knowledge of the metaphysical arts. Please come join us and meet some new friends!</p>
+    <div style="padding-left: 20%; padding-right: 20%">
+        <iframe src="https://discord.com/widget?id=1029505842296406056&theme=dark" width="350" height="500" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+</div>
 </body>
 </html>
